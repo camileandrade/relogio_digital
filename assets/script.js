@@ -40,6 +40,9 @@ function atualizarRelogio() {
 
 }
 
+atualizarRelogio();
+setInterval(atualizarRelogio, 1000);
+
 const corEscolhida = document.getElementById('escolher-cor');
 
 corEscolhida.addEventListener('input', function() {
@@ -47,5 +50,11 @@ corEscolhida.addEventListener('input', function() {
     document.documentElement.style.setProperty('--cor', novaCor);
 });
 
-atualizarRelogio();
-setInterval(atualizarRelogio, 1000);
+const tema = document.getElementById('tema');
+const body = document.body;
+
+function trocarTema() {
+    body.classList.toggle('modo-claro');
+}
+
+tema.addEventListener('change', trocarTema);

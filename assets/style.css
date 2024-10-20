@@ -1,7 +1,7 @@
 :root {
+    --fundo: #000;
     --cor: #71fc00;
     --cinza: #111111;
-    --fundo: #000;
 }
 
 @font-face {
@@ -18,6 +18,26 @@
     }
 }
 
+@keyframes fecharLua {
+    0% {
+        background-color: transparent;
+        box-shadow: inset 15px 0px 0px 0px var(--cor);
+    }
+    25% {
+        box-shadow: inset 10px 0px 0px 0px var(--cor);
+    }
+    50% {
+        box-shadow: inset 5px 0px 0px 0px var(--cor);
+    }
+    75% {
+        box-shadow: inset 2px 0px 0px 0px var(--cor);
+    }
+    100% {
+        background-color: var(--cor);
+        box-shadow: none; 
+    }
+}
+
 * {
     font-family: fonteRelogio;
     margin: 0;
@@ -31,6 +51,51 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: 0.5s ease;
+}
+
+body.modo-claro {
+    --fundo: #fff;
+    --cinza: #d2d1d1;
+}
+
+.btn-tema {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check {
+    display: none;
+}
+
+.rotulo {
+    width: 4rem;
+    height: 2rem;
+    border: 0.2rem solid var(--cor);
+    border-radius: 4rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.bola {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    box-shadow: inset 10px 0px 0px 0px var(--cor);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.check:checked + .rotulo .bola {
+    transform: translateX(2rem); 
+    animation: fecharLua 1s forwards; 
 }
 
 .data {
@@ -109,8 +174,6 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    transition: border-color 0.3s ease;
     z-index: 1000;
 }
 
