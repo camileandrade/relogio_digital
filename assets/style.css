@@ -1,7 +1,7 @@
 :root {
-    --preto: #000;
-    --verde: #71fc00;
-    --cinza: #0e0e0e
+    --cor: #71fc00;
+    --cinza: #111111;
+    --fundo: #000;
 }
 
 @font-face {
@@ -11,21 +11,21 @@
 
 @keyframes piscar {
     0%, 100% {
-        color: var(--preto);
+        color: var(--fundo);
     }
     50% {
-        color: var(--verde);
+        color: var(--cor);
     }
 }
 
 * {
-    background-color: var(--preto);
     font-family: fonteRelogio;
     margin: 0;
     padding: 0;
 }
 
 body {
+    background-color: var(--fundo);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ body {
     align-items: center;
     gap: 1rem;
     letter-spacing: 1rem;
-    color: var(--verde);
+    color: var(--cor);
 }
 
 .data span:not(:last-child)::after {
@@ -71,13 +71,13 @@ body {
     font-size: 12rem;
     display: flex;
     align-items: center;
-    color: var(--verde);
+    color: var(--cor);
 }
 
 .separator {
     font-size: 9rem;
     margin-bottom: 1.3rem;
-    color: var(--verde);
+    color: var(--cor);
     animation: piscar 1s infinite;
 }
 
@@ -94,6 +94,38 @@ body {
 }
 
 .dia.active {
-    color: var(--verde);
+    color: var(--cor);
     font-weight: bold;
+}
+
+.cor {
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+    background-color: var(--cor);
+    border-radius: 50%;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease;
+    z-index: 1000;
+}
+
+.cor input{
+    width: 2rem; 
+    height: 2rem; 
+    position: absolute; 
+    opacity: 0; 
+    border-radius: 50%; 
+    cursor: pointer;
+    z-index: 2; 
+}
+
+.material-icons.icon {
+    font-size: 1.5rem;
+    color: var(--fundo); 
+    pointer-events: none; 
 }

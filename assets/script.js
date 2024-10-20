@@ -19,7 +19,7 @@ function atualizarRelogio() {
 
     elementoDia.textContent = formatar(dia);
     elementoMes.textContent = formatar(mes + 1);
-    elementoAno.textContent = formatar(ano);
+    elementoAno.textContent = ano;
 
     const hora = agora.getHours();
     const minutos = agora.getMinutes();
@@ -39,6 +39,13 @@ function atualizarRelogio() {
     document.getElementById(diaAtual).classList.add('active');
 
 }
+
+const corEscolhida = document.getElementById('escolher-cor');
+
+corEscolhida.addEventListener('input', function() {
+    const novaCor = corEscolhida.value;
+    document.documentElement.style.setProperty('--cor', novaCor);
+});
 
 atualizarRelogio();
 setInterval(atualizarRelogio, 1000);

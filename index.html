@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title> &#x1F558 Relógio Digital</title>
 </head>
+
 <body>
-    
-        <div class="data">
-            <span id="dia">00</span>
-            <span id="mes">00</span>
-            <span id="ano">0000</span>
+
+    <div class="data">
+        <span id="dia">00</span>
+        <span id="mes">00</span>
+        <span id="ano">0000</span>
+    </div>
+
+    <div class="relogio">
+        <div>
+            <span id="hora">00</span>
         </div>
 
-        <div class="relogio">
-            <div>
-                <span id="hora">00</span>
-            </div>
+        <span class="separator">:</span>
 
-            <span class="separator">:</span>
-        
-            <div>
-                <span id="minutos">00</span>
-            </div>  
-            
-            <span class="separator">:</span>
+        <div>
+            <span id="minutos">00</span>
+        </div>
 
-            <div>
-                <span id="segundos">00</span>
-            </div>
+        <span class="separator">:</span>
+
+        <div>
+            <span id="segundos">00</span>
         </div>
-        
-        <div class="dias-semana">
-            <span id="domingo" class="dia">D</span>
-            <span id="segunda" class="dia">S</span>
-            <span id="terca" class="dia">T</span>
-            <span id="quarta" class="dia">Q</span>
-            <span id="quinta" class="dia">Q</span>
-            <span id="sexta" class="dia">S</span>
-            <span id="sabado" class="dia">S</span>
-        </div>
+    </div>
+
+    <div class="dias-semana">
+        <span id="domingo" class="dia">D</span>
+        <span id="segunda" class="dia">S</span>
+        <span id="terca" class="dia">T</span>
+        <span id="quarta" class="dia">Q</span>
+        <span id="quinta" class="dia">Q</span>
+        <span id="sexta" class="dia">S</span>
+        <span id="sabado" class="dia">S</span>
+    </div>
+
+    <div class="cor">
+        <input type="color" id="escolher-cor" value="#71fc00">
+        <span class="material-icons icon">colorize</span> 
+    </div>
 
     <script src="assets/script.js"></script>
     
