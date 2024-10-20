@@ -1,10 +1,12 @@
 <h2>🕒 Relógio Digital</h2>
-<h4>👋 Bem-vindo ao meu projeto de Relógio Digital, um relógio minimalista e funcional.</h4>
+<h4>👋 Bem-vindo ao meu projeto de Relógio Digital, um relógio minimalista e personalizável.</h4>
 
 <h3>🚀 Funcionalidades</h3>
 <ul>
   <li><strong>Hora e Data em Tempo Real:</strong> Exibe o horário atual (horas:minutos:segundos) e a data (dia/mês/ano), atualizando em tempo real.</li>
   <li><strong>Destaque do Dia da Semana:</strong> As iniciais dos dias da semana são exibidas, com o dia atual sendo destacado dinamicamente com CSS.</li>
+  <li><strong>Light/Dark Mode:</strong> Alterna entre os modos claro e escuro para melhor visualização, com o modo escuro como padrão.</li>
+  <li><strong>Personalização de Cores:</strong> Permite escolher a cor dos componentes, oferecendo uma experiência personalizada de acordo com o gosto do usuário.</li>
 </ul>
 
 <h3>🛠 Tecnologias Utilizadas</h3>
@@ -22,13 +24,7 @@
   <li><strong>Objeto Date:</strong> Trabalhei com o <code>Date()</code> do JavaScript para extrair e formatar corretamente a data e a hora atual.</li>
 </ul>
 
-<h3>🚧 Melhorias Futuras</h3>
-<ul>
-  <li>Implementar alternância entre Light Mode e Dark Mode.</li>
-  <li>Adicionar um botão para personalizar as cores do relógio.</li>
-</ul>
-
-<h3>💡Como Usar</h3>
+<h3>💡 Como Usar</h3>
 <ol>
   <li>Clone este repositório:</li>
   <br>
