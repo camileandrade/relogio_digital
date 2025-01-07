@@ -90,7 +90,6 @@ body.modo-claro {
     top: 0.25rem;
     left: 0.25rem;
     box-shadow: inset 10px 0px 0px 0px var(--cor);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .check:checked + .rotulo .bola {
